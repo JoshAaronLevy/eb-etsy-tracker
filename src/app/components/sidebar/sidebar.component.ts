@@ -32,14 +32,22 @@ export interface ChildrenItems2 {
 //Menu Items
 export const ROUTES: RouteInfo[] = [
   {
-    path: "/dashboards",
-    title: "Dashboards",
+    path: "/dashboards/dashboard",
+    title: "Dashboard",
+    type: "link",
+    icontype: "ni-archive-2 text-primary"
+  },
+  {
+    path: "/tables",
+    title: "Orders",
     type: "sub",
-    icontype: "ni-shop text-primary",
+    icontype: "ni-cart text-green",
+    collapse: "tables",
     isCollapsed: true,
     children: [
-      { path: "dashboard", title: "Dashboard", type: "link" },
-      { path: "alternative", title: "Alternative", type: "link" }
+      { path: "tables", title: "All Orders", type: "link" },
+      // { path: "sortable", title: "Sortable", type: "link" },
+      { path: "ngx-datatable", title: "Ngx Datatable", type: "link" }
     ]
   },
   {
@@ -50,12 +58,12 @@ export const ROUTES: RouteInfo[] = [
     collapse: "examples",
     isCollapsed: true,
     children: [
-      { path: "pricing", title: "Pricing", type: "link" },
+      // { path: "pricing", title: "Pricing", type: "link" },
       { path: "login", title: "Login", type: "link" },
-      { path: "register", title: "Register", type: "link" },
-      { path: "lock", title: "Lock", type: "link" },
+      // { path: "register", title: "Register", type: "link" },
+      // { path: "lock", title: "Lock", type: "link" },
       { path: "timeline", title: "Timeline", type: "link" },
-      { path: "profile", title: "Profile", type: "link" }
+      // { path: "profile", title: "Profile", type: "link" }
     ]
   },
   {
@@ -68,7 +76,7 @@ export const ROUTES: RouteInfo[] = [
     children: [
       { path: "buttons", title: "Buttons", type: "link" },
       { path: "cards", title: "Cards", type: "link" },
-      { path: "grid", title: "Grid", type: "link" },
+      // { path: "grid", title: "Grid", type: "link" },
       { path: "notifications", title: "Notifications", type: "link" },
       { path: "icons", title: "Icons", type: "link" },
       { path: "typography", title: "Typography", type: "link" },
@@ -99,49 +107,30 @@ export const ROUTES: RouteInfo[] = [
       { path: "validation", title: "Validation", type: "link" }
     ]
   },
-  {
-    path: "/tables",
-    title: "Tables",
-    type: "sub",
-    icontype: "ni-align-left-2 text-default",
-    collapse: "tables",
-    isCollapsed: true,
-    children: [
-      { path: "tables", title: "Tables", type: "link" },
-      { path: "sortable", title: "Sortable", type: "link" },
-      { path: "ngx-datatable", title: "Ngx Datatable", type: "link" }
-    ]
-  },
-  {
-    path: "/maps",
-    title: "Maps",
-    type: "sub",
-    icontype: "ni-map-big text-primary",
-    collapse: "maps",
-    isCollapsed: true,
-    children: [
-      { path: "google", title: "Google Maps", type: "link" },
-      { path: "vector", title: "Vector Map", type: "link" }
-    ]
-  },
-  {
-    path: "/widgets",
-    title: "Widgets",
-    type: "link",
-    icontype: "ni-archive-2 text-green"
-  },
-  {
-    path: "/charts",
-    title: "Charts",
-    type: "link",
-    icontype: "ni-chart-pie-35 text-info"
-  },
-  {
-    path: "/calendar",
-    title: "Calendar",
-    type: "link",
-    icontype: "ni-calendar-grid-58 text-red"
-  }
+  // {
+  //   path: "/maps",
+  //   title: "Maps",
+  //   type: "sub",
+  //   icontype: "ni-map-big text-primary",
+  //   collapse: "maps",
+  //   isCollapsed: true,
+  //   children: [
+  //     { path: "google", title: "Google Maps", type: "link" },
+  //     { path: "vector", title: "Vector Map", type: "link" }
+  //   ]
+  // },
+  // {
+  //   path: "/widgets",
+  //   title: "Widgets",
+  //   type: "link",
+  //   icontype: "ni-archive-2 text-green"
+  // },
+  // {
+  //   path: "/charts",
+  //   title: "Charts",
+  //   type: "link",
+  //   icontype: "ni-chart-pie-35 text-info"
+  // }
 ];
 
 @Component({
